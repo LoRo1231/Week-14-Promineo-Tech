@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+.Navbar-link{
+  color: white;
+  margin-right: 15px;
+  float: left;
+  font-size: larger;
+}
+
+.border{
+  border-style: solid;
+  border-color: black;
+  border-radius: 2px;
+}
+
+.poster{
+  height: 900px;
+}
+
+.float-left{
+  float: left;
+}
+
+.text-box{
+  height: 300px;
+}

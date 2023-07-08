@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/navbar';
+import ReviewSidebar from './components/sidebar';
+import AddMovieReview from './components/form';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar/>
+      <ReviewSidebar/>
+      <AddMovieReview onSubmit = {postReview}/>
     </div>
   );
+}
+
+const nextId = 0;
+
+function postReview(newReviewData){
+  const postedReview = {id: nextId++, ...newReviewData};
 }
 
 export default App;
